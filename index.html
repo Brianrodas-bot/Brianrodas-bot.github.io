@@ -1,89 +1,33 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Trabajo Práctico Final - Evento onclick</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="nav" > 
-        <h1 class="nav-title"> Perfil </h1>
-        <ul class="nav-links">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#" class="active">My Profile</a></li>
-            <li><a href="#">Encontrar conexiones</a></li>
-            <li><button class="btn">Sing Out</button></li>
-        </ul>
-    </div>
-    <div class="container">
-        <div class="profile">
-            <img src="descarga.jpg" alt="Profile">
-         </div>
-    <h1>
-        BRIAN RODAS
-    </h1>
-    <h2>
-    <img src="data:image/png;base64,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" alt="ovelar"  height="20px"
-    width="20px"> Developer | Developer | Problem solver master of shadows and the internet </h2>
-
-    </footer>
-
-        <footer class="footer">
-            <p></p> <a href="#">edit profile </a> 
-        </footer>
-
-         <!-- Sección de solicitudes de amistad (Lado derecho) -->
-    <div class="solicitudes">
-        <h3>Solicitudes de amistad</h3>
-        <div class="solicitud">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Perfil 1">
-            <span>Lucas Díaz</span>
-            <div class="acciones-solicitud">
-                <button class="aceptar"><i class="fas fa-check"></i></button>
-                <button class="rechazar"><i class="fas fa-times"></i></button>
+    <h1>Trabajo Práctico Final</h1>
+    <div class="window">
+        <div class="title-bar">
+            <span>Contador de Clics</span>
+            <button class="login-btn">Login</button>
+        </div>
+        <div class="content">
+            <div class="definition">
+                <h2>clic</h2>
+                <p>Acción de hacer clic con el ratón.</p>
+                <button id="add-definition">Add Definition</button>
+            </div>
+            <div class="definition">
+                <h2>clic</h2>
+                <p>Evento que incrementa un contador.</p>
+                <button id="miBoton">Haz Clic</button>
+                <input type="text" id="contador" value="0 clics" readonly>
             </div>
         </div>
-        <div class="solicitud">
-            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Perfil 2">
-            <span>Camila Ríos</span>
-            <div class="acciones-solicitud">
-                <button class="aceptar"><i class="fas fa-check"></i></button>
-                <button class="rechazar"><i class="fas fa-times"></i></button>
-            </div>
-        </div>
+        <div class="sticky-note">Define "clic"!</div>
+        <div class="sticky-note">+1 por clic</div>
     </div>
-
-      <!-- Sección de mis conexiones (Lado derecho, debajo de solicitudes) -->
-    <div class="mis-conexiones">
-        <h3>Mis Conexiones</h3>
-        <div class="conexiones-lista">
-            <div class="conexion">
-                <img src="https://randomuser.me/api/portraits/men/16.jpg" alt="Perfil 3">
-                Carlos González
-            </div>
-            <div class="conexion">
-                <img src="https://randomuser.me/api/portraits/women/20.jpg" alt="Perfil 4">
-                María López
-            </div>
-            <div class="conexion">
-                <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Perfil 5">
-                José Pérez
-            </div>
-            <div class="conexion">
-                <img src="https://randomuser.me/api/portraits/women/35.jpg" alt="Perfil 6">
-                Ana Rodríguez
-            </div>
-        </div>
-
-        <!-- Sección de educacions -->
-    <div class="Education">
-        <h3>Education</h3>
-        <div class="Educacion">
-             <h4>Coding Dojo - fuel staka pita</h4>
-            </div>
-        </div>
-    </div>
-        <button id="ver-mas" disabled>Ver más</button> <!-- Botón inactivo -->
-    </div>
+    <script src="script.js"></script>
 </body>
 </html>
